@@ -1,0 +1,137 @@
+{
+
+    "mappings": {
+  
+      "properties": {
+  
+        "שם ראשי": {
+  
+          "type": "text",
+  
+          "fields": {
+  
+            "keyword": {
+  
+              "type": "keyword",
+  
+              "ignore_above": 256
+  
+            }
+  
+          }
+
+        },
+  
+        "תואר": {
+  
+          "type": "text",
+  
+          "fields": {
+  
+            "keyword": {
+  
+              "type": "keyword",
+  
+              "ignore_above": 256
+  
+            }
+  
+          }
+          
+  
+        },
+  
+        "שם מישני": {
+  
+          "type": "text",
+  
+          "fields": {
+  
+            "keyword": {
+  
+              "type": "keyword",
+  
+              "ignore_above": 256
+  
+            }
+  
+          }
+           
+  
+        },
+  
+        "קבוצה": {
+  
+          "type": "text",
+  
+          "fields": {
+  
+            "keyword": {
+  
+              "type": "keyword",
+  
+              "ignore_above": 256
+  
+            }
+  
+          }
+  
+  
+        },
+  
+        "קבוצה נוספת": {
+  
+          "type": "text",
+  
+          "fields": {
+  
+            "keyword": {
+  
+              "type": "keyword",
+  
+              "ignore_above": 256
+  
+            }
+  
+          }
+          
+  
+        },
+  
+        "סוג": {
+  
+          "type": "keyword"
+           
+  
+        },
+  
+        "קוד": {
+  
+          "type": "integer"
+          
+        },
+  
+        "שכונה": {
+  
+          "type": "text",
+  
+          "fields": {
+  
+            "keyword": {
+  
+              "type": "keyword",
+  
+              "ignore_above": 256
+  
+            }
+  
+          }
+          
+  
+        }
+  
+      }
+  
+    }
+  
+  }
