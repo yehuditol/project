@@ -12,7 +12,19 @@ function SearchPage() {
 
     const [results, setResults] = useState([]);
 
-
+    // const handleSearch = async () => {
+    //     try {
+    //       const response = await axios.post('http://localhost:3000/api/search', {
+    //         query
+    //         //, env // 'local' או 'test'
+    //       });
+    //       setResults(response.data);
+    //       setError(null);
+    //     } catch (error) {
+    //       setError(error.response ? error.response.data.error : 'שגיאה בחיפוש');
+    //       setResults([]);
+    //     }
+    //   };
 
     const search = async () => {
         let searchQuery;
@@ -41,7 +53,7 @@ function SearchPage() {
                          
                         }
                     }
-                };
+                 };
                 break;
             case 'phrase':
                 searchQuery = {
@@ -57,21 +69,32 @@ function SearchPage() {
             default:
                 searchQuery = { query: { match_all: {} } };
         }
-        const response = await axios.post(`http://localhost:9200/streets/_search`,
-            searchQuery, {
-auth: {
-                username: 'elastic', // שנה לפי שם המשתמש שלך
-                 password:'FyiwL_bNosJ2tFc6Cnyy'
-            },
-            headers: {
-                'Content-Type': 'application/json'
-              }
-            // params: { q, type: searchType },
+//        const response = await axios.post(`http://localhost:9200/streets/_search`,
+//             searchQuery, {
+// auth: {
+//                 username: 'elastic', // שנה לפי שם המשתמש שלך
+//                  password:'FyiwL_bNosJ2tFc6Cnyy'
+//             },
+//             headers: {
+//                 'Content-Type': 'application/json'
+//               }
+//             // params: { q, type: searchType },
           
             
 
-        });
-
+//         });
+let response
+try {
+    response = await axios.post('http://localhost:5000/api/search', {
+        searchQuery
+      //, env // 'local' או 'test'
+    });
+    setResults(response.data);
+    // setError(null);
+  } catch (error) {
+    // setError(error.response ? error.response.data.error : 'שגיאה בחיפוש');
+    setResults([]);
+  }
         setResults(response.data.hits.hits);
 
     };

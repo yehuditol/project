@@ -24,12 +24,12 @@ client.ping().then(()=>console.log('elastic search')).catch((err)=>console.error
 async function createIndex(){
   try{
     const exists=await client.indices.exists({index:indexName})
-    if(exists)
-    {
-      const response = await client.indices.delete({
-        index: indexName
-      });
-    }
+    // if(exists)
+    // {
+    //   const response = await client.indices.delete({
+    //     index: indexName
+    //   });
+    // }
   //  console.log(response);
     if(!exists)
     {
@@ -104,10 +104,10 @@ async function createIndex(){
   }
 
 
-               (async()=>{
+               async function loadData(){
                await createIndex();
                await loadCSVtoElastic();
-               })();
+               };
                
-
-module.exports=client
+module.exports.loadData=loadData;
+module.exports.client=client
