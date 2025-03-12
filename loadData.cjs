@@ -97,7 +97,7 @@ async function createIndex(){
         body: data,
         timeout: '60s' // הגדלנו ל-60 שניות ליתר ביטחון
       });
-      console.log('מנה נטענה בהצלחה:', body.items.length / 2, 'רשומות');
+  //    console.log('מנה נטענה בהצלחה:', body.items.length / 2, 'רשומות');
     } catch (error) {
       console.error('שגיאה בטעינת מנה:', error);
     }

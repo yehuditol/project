@@ -1,0 +1,117 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+    direction: rtl; /* תמיכה בעברית */
+    padding: 20px;
+  }
+  
+  .search-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* סגנון לשדה הקלט */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007bff;
+  }
+  
+  /* סגנון לרדיו ולתוויות */
+  .search-options {
+    margin-bottom: 20px;
+  }
+  
+  .search-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  input[type="radio"] {
+    margin-left: 10px; /* מרווח בין הרדיו לטקסט */
+    accent-color: #007bff; /* צבע מותאם לרדיו */
+  }
+  
+  /* סגנון לכפתור */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* סגנון לרשימת התוצאות */
+  ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  ul li {
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+  
+  ul li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* עיצוב רספונסיבי */
+  @media (max-width: 600px) {
+    .search-page {
+      padding: 15px;
+    }
+  
+    input[type="text"] {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    ul li {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }

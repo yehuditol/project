@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import '../styles.css'
 import axios from 'axios';
 
 
@@ -103,11 +103,11 @@ try {
 
     return (
 
-        <div>
+        <div className="search-page">
 
             <input type="text" value={q} onChange={(e) => setQuery(e.target.value)} />
 
-            <div>
+            <div className="search-options">
 
                 <label>
 
